@@ -10,11 +10,7 @@ using namespace std;
 class Menu{
 public:
 
-    /*
-    void imprimeExtrato(Conta* c){
-        c->extrato();
-    }
-    */
+
 
     int menu(int r){
         do{
