@@ -10,8 +10,6 @@ using namespace std;
 class Menu{
 public:
 
-
-
     int menu(int r){
         do{
             cout << endl << endl;
@@ -28,9 +26,9 @@ public:
             cout << setfill(' ') << setw(31) << " " << "| [0] --> Sair                 |     " << endl;
             cout << setfill(' ') << setw(31) << " " << "|______________________________|     " << endl;
             cout << setfill(' ') << setw(32) << " " << "Digite a OP desejada:";
-            //fflush(stdin);
+            fflush(stdin);
             cin >> r;
-
+            system("cls");
         }while(r != 0 && r != 1 && r != 2 && r != 3 && r != 4 && r != 5 && r != 6);
         return r;
     }
