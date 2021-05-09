@@ -10,29 +10,29 @@
 class Banco{
 public:
 
-    // MÉTODOS GERAIS:
+    // MÃ‰TODOS GERAIS:
     void inicio();
 
 private:
     Menu _op;
     int _resposta;
 
-    // EX 02 da Prova;
+    // EX 02 do ED;
     void OP2() const;
 
-    // EX 03 da Prova;
+    // EX 03 do ED;
     void OP3();
 
-    // EX 04 da Prova;
+    // EX 04 do ED;
     void OP4();
 
-    // EX 05 da Prova
+    // EX 05 do ED;
     void OP5();
 
-    // EX 06 da Prova
+    // EX 06 do ED;
     void OP6();
 
-    // EX 07 da Prova
+    // EX 07 do ED;
     void OP7();
 };
 
