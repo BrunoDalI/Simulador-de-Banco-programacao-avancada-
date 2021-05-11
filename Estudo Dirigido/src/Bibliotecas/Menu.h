@@ -9,7 +9,7 @@ using namespace std;
 
 class Menu{
 public:
-
+    // Mostra em tela um menu de interação com os exercicios da lista
     int menu(int r){
         do{
             cout << endl << endl;
