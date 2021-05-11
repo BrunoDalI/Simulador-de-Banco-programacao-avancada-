@@ -36,7 +36,7 @@ public:
     }
 
 private:
-    // _nome: string
+    //Atributos da classe Cliente;
     string _nome;
 };
 
