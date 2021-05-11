@@ -195,7 +195,7 @@ void Banco::OP6(){
     delete[] conta_corrente;
 }
 
-
+// Mostra em tela a resolução do ex 7 da lista;
 void Banco::OP7(){
     cout << endl;
     cout << " -> 7. Crie um vetor com 100 contas." << endl;
