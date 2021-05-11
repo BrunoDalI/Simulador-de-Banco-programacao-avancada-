@@ -1,9 +1,9 @@
 
 // 5. Altere os construtores das classes ContaCorrente e ContaPoupanca para
 //    imprimir a seguinte mensagem: "Criando	 conta	 {numero}	 do	 cliente
-//    {cliente}" , onde {numero} é o número da conta e {cliente} é o nome do cliente da conta.
+//    {cliente}" , onde {numero} Ã© o nÃºmero da conta e {cliente} Ã© o nome do cliente da conta.
 
-// OBS: Como o _numero da classe CONTA é privado, tive que fazer essa modificação do ex 5 pelo construtor da classe conta
+// OBS: Como o _numero da classe CONTA Ã© privado, tive que fazer essa modificaÃ§Ã£o do ex 5 pelo construtor da classe conta
 // linha 30;
 
 #ifndef CONTACORRENTE_H_INCLUDED
@@ -23,8 +23,8 @@ public:
     ContaCorrente(int numero, Cliente* nomeCliente) : Conta(numero, nomeCliente) { }
 
 
-    // MÉTODOS GERAIS:
-    // extrato(): void
+    // MÃ‰TODOS GERAIS:
+    // Monstra em tela o extratos da Conta Corrente com chamada da funÃ§Ã£o virtual extrato na classe conta;
     void extrato() {
         cout << endl;
         //cout << "Criando conta " << _numero << " do cliente " << _nomeCliente->getNome() << endl;
@@ -35,7 +35,7 @@ public:
         cout << " |" << setfill('_') << setw(46) << "|" << endl;
     };
 
-    // aplicaJurosDiarios(dias: int): void
+    // Aplica juros na conta corrente de 0.01% ao dia
     void aplicaJurosDiarios(int dias) {
         cout << " | > Aplicacao do juros sobre a Conta Corrente" << endl;
         // Uma conta Corrente aplica juros de 0,01% ao dia
