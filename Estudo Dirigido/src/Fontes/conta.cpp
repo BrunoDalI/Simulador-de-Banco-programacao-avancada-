@@ -14,7 +14,6 @@ void Conta::deposita(float valor){
 
 // Realiza uma retira de uma quantia da conta;
 void Conta::retira(float valor){
-void Conta::retira(float valor){
     //cout << "  Retirada de " << valor << "R$ realizada.";
     _saldo -= int(valor);
 }
