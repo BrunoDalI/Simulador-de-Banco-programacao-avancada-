@@ -14,9 +14,12 @@ public:
     void inicio();
 
 private:
+    // Atributos da classe Banco;
     Menu _op;
     int _resposta;
 
+    // Funções que realizam os ex da lista;
+    
     // EX 02 do ED;
     void OP2() const;
 
