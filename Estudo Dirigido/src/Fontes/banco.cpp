@@ -6,7 +6,7 @@
 
 
 
-
+// Inicia o programa
 void Banco::inicio(){
     _resposta = _op.menu(_resposta);
 
@@ -50,11 +50,13 @@ void Banco::inicio(){
     }
 }
 
+
+// Mostra em tela a resolu√ß√£o do ex 2 da lista
 void Banco::OP2() const{
     cout << endl;
     cout << " -> 2. Sobrescreva o metodo aplicaJurosDiarios nas classes ContaCorrente e ContaPoupanca." << endl;
     cout << setfill(' ') << setw(4) << " " << " Uma conta corrente aplica juros de 0,01% ao dia," << endl;
-    cout << setfill(' ') << setw(4) << " " << " enquanto uma conta poupanÁa aplica juros de 0,08% ao dia." << endl;
+    cout << setfill(' ') << setw(4) << " " << " enquanto uma conta poupan√ßa aplica juros de 0,08% ao dia." << endl;
     cout << endl << setfill(' ') << setw(3) << " " << "  Solucao:" << endl;
     cout << endl << setfill(' ') << setw(3) << " " << " // Arquivo: ContaCorrente.h" << endl;
     cout << setfill(' ') << setw(4) << " " << " void aplicaJurosDiarios(int dias) {" << endl;
@@ -70,48 +72,59 @@ void Banco::OP2() const{
 }
 
 
+// Cria 2 contas Corrente/Poupanca e faz 4 opera√ß√µes de deposito/retirada nelas, ex 3 da lista
 void Banco::OP3(){
     cout << endl;
     cout << " -> 3. Escreva um programa que crie 2 contas corrente e 2 contas poupanca." << endl;
     cout << setfill(' ') << setw(4) << " " << " - Realize uma serie de 4 operacoes de deposito e retirada, e imprima seus extratos."<< endl;
 
 
-    // 1∞ Conta Corrente
+    // 1¬∞ Conta Corrente
     ContaCorrente contaC1(1, new Cliente("Bruno"));
     // 4 Operacoes
     contaC1.deposita(1000);
     contaC1.retira(500);
+    contaC1.deposita(2000);
+    contaC1.retira(1000);
     contaC1.extrato();
     contaC1.aplicaJurosDiarios(10);
 
-    // 2∞ Conta Corrente
+    // 2¬∞ Conta Corrente
     ContaCorrente contaC2(2, new Cliente("Alice"));
     // 4 Operacoes
     contaC2.deposita(2000);
     contaC2.retira(50);
+    contaC2.deposita(4000);
+    contaC2.retira(100);
     contaC2.extrato();
     contaC2.aplicaJurosDiarios(20);
 
 
     cout << endl << endl;
-    // 1∞ Conta Poupanca
+    // 1¬∞ Conta Poupanca
     ContaPoupanca contaP1(1, new Cliente("Danilo"));
     // 4 Operacoes
     contaP1.deposita(3000);
     contaP1.retira(2000);
+    contaP1.deposita(1000);
+    contaP1.retira(1000);
     contaP1.extrato();
     contaP1.aplicaJurosDiarios(30);
 
-    // 2∞ Conta Poupanca
+    // 2¬∞ Conta Poupanca
     ContaPoupanca contaP2(2, new Cliente("Maite"));
     // 4 Operacoes
     contaP2.deposita(4000);
     contaP2.retira(3050);
+    contaP2.deposita(2000);
+    contaP2.retira(1500);
     contaP2.extrato();
     contaP2.aplicaJurosDiarios(40);
 }
 
 
+// Fun√ß√£o que realiza o problema do o ex 4 da lista
+// Realiza a tranferencia de 1000,00 de uma conta poupanca para uma corrente, aplica juros de 100 dias e imrprime o extrato
 void Banco::OP4(){
     cout << endl;
     cout << " -> 4. Realize uma transferencia de R$ 1000,00 de uma conta poupanca para uma conta corrente. " << endl;
@@ -126,7 +139,7 @@ void Banco::OP4(){
     CCex1.extrato();
     CPex2.extrato();
 
-    // Realize uma transferencia de R$ 1000,00 de uma conta poupanÁa para uma conta corrente.
+    // Realize uma transferencia de R$ 1000,00 de uma conta poupan√ßa para uma conta corrente.
     CCex1.transfere(&CPex2,1000);
 
     // Imprime apenas para ver as transferencias
@@ -145,6 +158,7 @@ void Banco::OP4(){
 }
 
 
+// Mostra em tela a resolu√ß√£o do ex 5 da lista;
 void Banco::OP5(){
     cout << endl;
     cout << " -> 5. Altere os construtores das classes ContaCorrente e ContaPoupanca para" << endl;
@@ -156,6 +170,8 @@ void Banco::OP5(){
     cout << setfill(' ') << setw(4) << " " <<  " Solucao encontrada na linha 29 do arquivo Conta.h" << endl;
 }
 
+
+// Mostra em tela a resolu√ß√£o do ex 6 da lista;
 void Banco::OP6(){
     cout << endl;
     cout << " -> 6. Crie um vetor de 100 contas correntes." << endl;
@@ -173,7 +189,7 @@ void Banco::OP6(){
     cout << setfill(' ') << setw(4) << " " << " ContaCorrente** conta_corrente = new ContaCorrente*[100];" << endl;
     cout << setfill(' ') << setw(4) << " " << " delete[] conta_corrente;" << endl;
 
-    // SoluÁ„o retirada da aula -> 04 - "Passagem por referencia"
+    // Solu√ß√£o retirada da aula -> 04 - "Passagem por referencia"
     ContaCorrente** conta_corrente = (new ContaCorrente*[100]);
     // Destroi o vetor alocado;
     delete[] conta_corrente;
@@ -185,13 +201,13 @@ void Banco::OP7(){
     cout << " -> 7. Crie um vetor com 100 contas." << endl;
     cout << setfill(' ') << setw(4) << " " << " - Qual problema ocorreu?" << endl;
     cout << setfill(' ') << setw(4) << " " << " - Como este problema pode ser solucionado?" << endl;
-    cout << setfill(' ') << setw(4) << " " << " - Implemente a correÁ„o do problema." << endl;
-    cout << setfill(' ') << setw(4) << " " << " - Coloque a resposta como coment·rio no codigo da funcao main()." << endl;
+    cout << setfill(' ') << setw(4) << " " << " - Implemente a corre√ß√£o do problema." << endl;
+    cout << setfill(' ') << setw(4) << " " << " - Coloque a resposta como coment√°rio no codigo da funcao main()." << endl;
 
 
     cout << endl << setfill(' ') << setw(3) << " " << "  R: O probelma pe que o objeto 'Conta' nao aceita ponteiros do tipo 'ContaCorrente'," << endl;
     cout << setfill(' ') << setw(4) << " " << "  pois a classe 'Conta' eh pai da classe ContaCorrente." << endl;
-    cout << setfill(' ') << setw(4) << " " << "  Uma soluÁ„o encontrada na internet, foi converter os ponteiro " << endl;
+    cout << setfill(' ') << setw(4) << " " << "  Uma solu√ß√£o encontrada na internet, foi converter os ponteiro " << endl;
     cout << setfill(' ') << setw(4) << " " << "  do tipo ContaCorrente para o tipo Conta" << endl;
 
 
@@ -199,8 +215,9 @@ void Banco::OP7(){
     cout << setfill(' ') << setw(4) << " " << " Conta** conta = (Conta**) new ContaCorrente*[100];" << endl;
     cout << setfill(' ') << setw(4) << " " << " delete[] conta;" << endl;
 
-
+    // Cria um vetor de ponteiros do tipo ContaCorrente;  
     Conta** conta = ((Conta**) new ContaCorrente*[100]);
+    // Destroi o vetor alocado;
     delete[] conta;
 }
 
