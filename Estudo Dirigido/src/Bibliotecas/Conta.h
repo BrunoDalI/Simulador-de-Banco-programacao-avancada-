@@ -51,7 +51,7 @@ public:
     }
 
 
-    // M�TODOS GERAIS:
+    // MÉTODOS GERAIS:
     // deposita(valor: float): void
     void deposita(float valor);
     // retira(valor: float): void
@@ -60,24 +60,22 @@ public:
     void transfere(Conta *ContaDestino, float valorTrasnf);
 
 
-    // extrato(): void
-    // virtual das classes ContaCorrente/ContaPoupanca
+    // Função virtual das classes ContaCorrente/ContaPoupanca mostra em tela o extrato da conta
     virtual void extrato() const{
         cout << " | N-Conta: 0" << _numero << endl;
         cout << " | Cliente Nome: " << _nomeCliente->getNome() << endl;
         cout << " | Saldo: " << getSaldo() << " R$" << endl;
     }
 
-    // aplicaJurosDiario(dias: int): void
-    // virtual das classes ContaCorrente/ContaPoupanca
+     // Função virtual das classes ContaCorrente/ContaPoupanca
     virtual void aplicaJurosDiarios(int dias) = 0;
 
 private:
-    // _numero: int
+    //Atributos da classe Conta;
     int _numero;
-    // _saldo: int
     int _saldo;
-
+    
+    // ponteiro do Objeto tipo Cliente;
     Cliente* _nomeCliente;
 };
 
