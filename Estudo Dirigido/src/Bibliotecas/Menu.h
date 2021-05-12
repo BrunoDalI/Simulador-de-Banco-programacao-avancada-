@@ -29,7 +29,7 @@ public:
             fflush(stdin);
             cin >> r;
             system("cls");
-        }while(r != 0 && r != 1 && r != 2 && r != 3 && r != 4 && r != 5 && r != 6);
+        }while(r != 0 && r != 1 && r != 2 && r != 3 && r != 4 && r != 5 && r != 6 && r != 7);
         return r;
     }
 };
