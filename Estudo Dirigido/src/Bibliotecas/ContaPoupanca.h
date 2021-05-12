@@ -25,7 +25,7 @@ public:
 
     // MÉTODOS GERAIS:
     // Monstra em tela o extratos da Conta Poupanca com chamada da função virtual extrato na classe conta;
-    void extrato() {
+    void extrato() const{
         cout << endl;
         //cout << "Criando conta " << _numero << " do cliente " << _nomeCliente->getNome() << endl;
         cout << " +" << setfill('-') << setw(46) << "+" << endl;
