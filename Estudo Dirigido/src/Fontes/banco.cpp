@@ -159,7 +159,7 @@ void Banco::OP4(){
 
 
 // Mostra em tela a resolução do ex 5 da lista;
-void Banco::OP5(){
+void Banco::OP5() const{
     cout << endl;
     cout << " -> 5. Altere os construtores das classes ContaCorrente e ContaPoupanca para" << endl;
     cout << setfill(' ') << setw(4) << " " << " imprimir a seguinte mensagem: " "Criando	 conta	 {numero}	 do	 cliente" << endl;
@@ -168,6 +168,7 @@ void Banco::OP5(){
     //                  "Criando conta	    {numero}	 do	cliente             {cliente}"
     cout << setfill(' ') << setw(4) << " " <<  " Criando conta  _numero  do cliente  _nomeCliente->getNome() " << endl;
     cout << setfill(' ') << setw(4) << " " <<  " Solucao encontrada na linha 29 do arquivo Conta.h" << endl;
+    cout << setfill(' ') << setw(4) << " " <<  " cout << endl << " "-> Criando conta" " << _numero << " "do cliente" " << _nomeCliente->getNome();"<< endl;
 }
 
 
