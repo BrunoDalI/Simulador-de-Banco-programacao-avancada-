@@ -62,7 +62,7 @@ public:
 
     // Função virtual das classes ContaCorrente/ContaPoupanca mostra em tela o extrato da conta
     virtual void extrato() const{
-        cout << " | N-Conta: 0" << _numero << endl;
+        cout << " | N-Conta: 0" << getNumero() << endl;
         cout << " | Cliente Nome: " << _nomeCliente->getNome() << endl;
         cout << " | Saldo: " << getSaldo() << " R$" << endl;
     }
