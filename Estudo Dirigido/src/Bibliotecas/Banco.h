@@ -30,7 +30,7 @@ private:
     void OP4();
 
     // EX 05 do ED;
-    void OP5();
+    void OP5() const;
 
     // EX 06 do ED;
     void OP6();
