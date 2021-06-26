@@ -1,6 +1,6 @@
 
 
-#include "Singleton.h" seguin
+#include "Singleton.h" 
 
 int main(){
     Singleton *s1, *s2, *s3;
